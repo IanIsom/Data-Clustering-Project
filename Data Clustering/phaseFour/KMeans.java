@@ -19,9 +19,10 @@ public class KMeans {
 	private int totalLines;
 	private int dimensions;
 	private int clusterNumber;
+	private int iterationNum;
+	private int optimalCenters;
 	private double finalSSE;
 	private double initialSSE;
-	private int iterationNum;
 	
 	//Setters and getters
 	public void setFileName(String fn) {
@@ -30,6 +31,14 @@ public class KMeans {
 	
 	public String getFileName() {
 		return fileName;
+	}
+	
+	public void setOptimalCenters(int optimal) {
+		optimalCenters = optimal;
+	}
+	
+	public int getOptimalCenters() {
+		return optimalCenters;
 	}
 	
 	public void setClusterNumber(int clusterNum) {
@@ -125,6 +134,11 @@ public class KMeans {
 		firstLine = br.readLine().split("\\s");
 		setTotalLines(firstLine[0]);
 		setDimensions(firstLine[1]);
+		
+		System.out.println(firstLine.toString());
+		//setOptimalCenters(Integer.parseInt(firstLine[2]));
+		
+		//System.out.println("Optimal Centers: " + getOptimalCenters());
 		
 		br.close();
 	}

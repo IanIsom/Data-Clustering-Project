@@ -58,9 +58,9 @@ public class Main {
 					bestRun = temp;
 				}
 			}
-			bestRun.printResult();
-			System.out.println("CH("+ i + "): " + bestRun.calculateCH(bestRun.getFinalSSE()) + "\n");
-			System.out.println("SW("+ i + "): " + bestRun.calculateSC() + "\n");
+			//bestRun.printResult();
+			//System.out.println("CH("+ i + "): " + bestRun.calculateCH(bestRun.getFinalSSE()) + "\n");
+			//System.out.println("SW("+ i + "): " + bestRun.calculateSC() + "\n");
 		}
 	  }
 }
